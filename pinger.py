@@ -2,9 +2,11 @@ from playsound import playsound
 from time import sleep
 import sys
 import argparse
+import os
 
 ERASE_IN_LINE_TERM_ESCAPE = "\033[K"
-TONE_SOUND = "tone.wav"
+TONE_SOUND = os.path.join(os.path.dirname(os.path.realpath(__file__)), "tone.wav")
+
 
 def print_replaceable_message(msg):
     sys.stdout.write(ERASE_IN_LINE_TERM_ESCAPE)
